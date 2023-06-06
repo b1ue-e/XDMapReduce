@@ -28,17 +28,17 @@ public class MapReduceGrandFind {
     }
 
     public static class Reducer3 extends org.apache.hadoop.mapreduce.Reducer<Text, Text, Text, Text>{
-        private boolean first = true;
+//         private boolean first = true;
         
         
-        @Override
-        protected void setup(Context context) throws IOException, InterruptedException {
-            super.setup(context);
-            if(first){
-                context.write(new Text("grandchild"), new Text("grandparent"));
-                first = false;
-            }
-        }
+//         @Override
+//         protected void setup(Context context) throws IOException, InterruptedException {
+//             super.setup(context);
+//             if(first){
+//                 context.write(new Text("grandchild"), new Text("grandparent"));
+//                 first = false;
+//             }
+//         }
 
 
 
