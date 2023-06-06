@@ -30,4 +30,5 @@ Andy, Joseph <br>
 - 给定亲子关系要求找出祖孙关系,这就要求key作为中间代来连接祖孙，使Mapper类输出的结果为<key,[grandchild,grandparent]>，那么value中的元素就是一对或多对祖孙关系，关键是要将输入行反序再读出，为了标识value中祖孙元素，读入时我添加了字符串开头"p:""c:"那么在遍历时就可以使用startwith函数来发现是祖辈还是孙辈
 - map 正序和反序输出键值对\<child,p:parent>,\<parent,c:child>
 - reduce 建立两个列表，分别存放value中祖辈和孙辈，最后输出它们的笛卡尔积。
+> Q2似乎应为测试文件问题，若不使用trim输出会缺少4个
 > 该仓库只存放了源码文件,无maven项目`pom.xml`
